@@ -11,6 +11,7 @@ function palind($palabra) {
     }
 }
 
+
 $palabraU = $_POST['palabra'];
 
 if (palind($palabraU)) {
@@ -19,3 +20,4 @@ if (palind($palabraU)) {
     echo "La palabra '$palabraU' no es un palíndromo ";
 }
 ?>
+ 
