@@ -1,10 +1,12 @@
 <?php
-$letra = readline ("Por favor ingrese una letra: ");
 
-$resultado = match(strtolower($letra)){
-    "a","e","i","o","u" => "usted escribio una vocal",
-    default => "Usted escribio una consonante"
+$letra = readline("Ingrese una letra: ");
+
+$categoria = match (strtolower($letra)) {
+    'a', 'e', 'i', 'o', 'u' => "Es una vocal",
+    'b', 'c', 'd', 'f', 'g' => "Es una consonante",
+    default => "Es un carácter especial o no reconocido",
 };
-echo $resultado;
 
+echo $categoria;
 ?>

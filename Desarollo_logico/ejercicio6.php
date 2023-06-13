@@ -2,14 +2,14 @@
 <?php
 $numero = readline("ingrese un numero para invertirlo ");
 
-$numeroInvertido = 0;
-$numeroTemporal = $numero;
+$numeroIn = 0;
+$numeroTe = $numero;
 
 for ($i = strlen($numero) - 1; $i >= 0; $i--) {
-    $digito = $numeroTemporal % 10;
-    $numeroInvertido = ($numeroInvertido * 10) + $digito;
-    $numeroTemporal = (int)($numeroTemporal / 10);
+    $digito = $numeroTe % 10;
+    $numeroIn = ($numeroIn * 10) + $digito;
+    $numeroTe = (int)($numeroTe / 10);
 }
-echo "Número original:$numero \n Resultado $numeroInvertido";
+echo "Número original:$numero \n Resultado $numeroIn";
 
 ?>

@@ -1,11 +1,8 @@
-
 <?php
-$string= readline("Ingrese la cadena de texto: ");
- 
-$resultado = match (strlen($string)){
-$string >=10 => "La cadena es larga",
-default => "La cadena es corta"
+$cadena =readline("escriba caulquier cosa para la cadena ")
+$resultado=match(true){
+    strlen($cadena)>=10 =>"esta cadena es larga "
+    default  =>"es una cadena corta"
 };
-
-echo $resultado;
+echo $resultado
 ?>

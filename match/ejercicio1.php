@@ -1,12 +1,14 @@
 <?php
-$numero = (int) readline ("Ingrese un numero del 1 al 3: ");
 
-$resultado = match($numero){
-    3 => "Escribio un numero grande",
-    2 => "Escribio un numero mediano",
-    1 => "Escribio un numero pequeño",
-    default => "No coincide con ninguna variable requerida"
+
+$num = readline("Ingrese un número entero: ");
+
+$resul = match ($num) {
+    '1' => "El número es 1",
+    '2' => "El número es 2",
+    '3' => "El número es 3",
+    default => "El número no es 1, 2 ni 3",
 };
- echo $resultado;
 
- ?>
+echo $resul;
+?>

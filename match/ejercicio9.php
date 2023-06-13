@@ -1,18 +1,17 @@
-<?php 
+<?php
+$hora = readline("Ingrese una hora en formato HH:MM: ");
 
-$hora = readline('Ingrese una hora: '); //Hora de entrada
 
-switch (true) {
-    case (strtotime($hora) >= strtotime('00:00') && strtotime($hora) < strtotime('12:00')):
-        echo "Buenos días";
-        break;
-    case (strtotime($hora) >= strtotime('12:00') && strtotime($hora) < strtotime('18:00')):
-        echo "Buenas tardes";
-        break;
-    case (strtotime($hora) >= strtotime('18:00') && strtotime($hora) <= strtotime('23:59')):
-        echo "Buenas noches";
-        break;
-    default:
-        echo "Entrada inválida";
-}
+$partirenHora = explode(":", $hora);
+$hora = intval($partirenHora[0]);
+
+$mensaje = match ($hora) {
+    0, 1, 2, 3, 4, 5 => "Es de madrugada",
+    6, 7, 8, 9, 10, 11 => "Es por la mañana",
+    12, 13, 14, 15, 16, 17 => "Es por la tarde",
+    18, 19, 20, 21, 22, 23 => "Es por la noche",
+    default => "Hora inválida",
+};
+
+echo $mensaje;
 ?>

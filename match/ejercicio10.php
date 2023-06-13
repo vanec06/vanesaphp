@@ -1,16 +1,14 @@
 <?php
-$opcion= (int) readline("Ingrese una opción del 1 al 5: "); 
-
+$opcion = readline("Ingrese una opción del 1 al 5: ");
 
 $resultado = match ($opcion) {
-1 => "Opción 1 seleccionada",
-2 => "Opción 2 seleccionada",
-3 => "Opción 3 seleccionada",
-4 => "Opción 4 seleccionada",
-5 => "Opción 5 seleccionada",
-default => "La opción no es válida"
-
+    '1' => "escucha musica de corridos ",
+    '2' => "ve a dormir ",
+    '3' => "ponte a jugar ",
+    '4' => "ponte a estudiar",
+    '5' => "saca a pasear a los perros ",
+    default => "Opción inválida",
 };
-echo $resultado;
 
+echo $resultado;
 ?>

@@ -1,16 +1,17 @@
 <?php
-$dia = (int)readline ("Por favor ingrese un numero para conocer que dia es: ");
+$dia = readline("Ingrese un numero para el dia de la semana : ");
 
-$resultado = match($dia){
-    1 => "Lunes",
-    2 => "Martes",
-    3 => "Miercoles",
-    4 => "Jueves",
-    5 => "Viernes",
-    6 => "Sabado",
-    7 => "Domingo",
-    default => "El numero no concide con ningun dia"
+$mensaje = match ($dia) {
+    '1'=> "lunes",
+    '2'=> "martes ",
+    '3' => "miercoles",
+    '4'=> "jueves",
+    '5'=> "viernes ",
+    '6'=> "sabado",
+    '7'=> "domingo",
+    
+    default => "dia invalido ",
 };
-echo $resultado;
 
+echo $mensaje;
 ?>

@@ -1,17 +1,14 @@
 <?php
-$numero = readline("ingrese un numero para verificar si se encuentra en la lista ");
-function buscarElemento($lista, $elemento)
-{
-    $posicion = array_search($elemento, $lista);
-    return $posicion !== false ? $posicion : "Elemento no encontrado";
+$numero = readline("Ingrese un número para verificar si se encuentra en la lista: ");
+
+$lista = [2, 4, 5, 6, 7, 3];
+
+$Resultado = array_search($numero, $lista);
+
+if ($Resultado !== false) {
+    echo "El elemento $numero se encuentra en la posición: $Resultado";
+} else {
+    echo "Elemento no encontrado";
 }
-
-$lista = [4, 2, 7, 1, 9, 5];
-
-
-$posicionElemento = buscarElemento($lista, $numero);
-
-
-echo "El elemento $numero se encuentra en la posición: $posicionElemento";
 
 ?>
